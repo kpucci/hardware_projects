@@ -1,0 +1,71 @@
+-- Katie Pucci
+-- ECE1120:: Battleship AI
+-- Controller
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+-- NOTE: Another option for loading game piece configs is to give the first
+--       space num and then the direction. Then, when the space is in the 
+--       setup config, it'll propagate the signal through to the rest of the
+--       pieces. Consider this if the IO utilization is too high. Be aware,
+--       though, that to send a sunken signal, you'll need to loop through 
+--       the array to find the spaces with those 
+--
+--       Can also consider not having an actual component for the game space
+--       and use a matrix instead.
+
+ENTITY Controller IS
+  PORT (
+    D_P1  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    D_P2  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    S1_P1 : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    S1_P2 : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    S1_P3 : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    S2_P1 : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    S2_P2 : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    S2_P3 : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    CR_P1  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    CR_P2  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    CR_P3  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    B_P1  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    B_P2  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    B_P3  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    B_P4  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    CA_P1  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    CA_P2  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    CA_P3  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    CA_P4  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    CA_P5  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    Shoot  : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+    
+  );
+END ENTITY Controller;
+
+--
+ARCHITECTURE structural OF Controller IS
+  -- Define game space component
+  COMPONENT GameSpace
+    PORT (
+      Piece  : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+      North  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+      East   : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+      West   : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+      South  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+      Shoot  : IN STD_LOGIC;
+      Sunken : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+      Reset  : IN STD_LOGIC;
+      State  : OUT STD_LOGIC
+    );
+  END COMPONENT;
+  
+BEGIN
+  -- Instantiate game spaces
+  A0 : GameSpace
+  PORT MAP (
+    
+  );
+  
+END ARCHITECTURE structural;
+

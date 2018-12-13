@@ -1,0 +1,13 @@
+[ModelSim]
+battleship_ai_lib = $HDS_PROJECT_DIR\battleship_ai_lib\work
+[hdl]
+battleship_ai_lib = $HDS_PROJECT_DIR\battleship_ai_lib\hdl
+[hds]
+battleship_ai_lib = $HDS_PROJECT_DIR\battleship_ai_lib\hds
+[hds_settings]
+default_library = battleship_ai_lib
+version = 2
+[library_type]
+battleship_ai_lib = regular
+[shared]
+others = $HDS_TEAM_HOME/shared.hdp

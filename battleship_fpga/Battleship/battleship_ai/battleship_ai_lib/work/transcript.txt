@@ -1,0 +1,433 @@
+# //  ModelSim SE 6.6g May 23 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -L battleship_ai_lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli {"D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll"} battleship_ai_lib.GameBoard(behavior) 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3865) Due to PLI being present, full design access is being specified.
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.battleshiptypes
+# Loading work.gameboard(behavior)#1
+# 
+#  
+force d {A1, A2}
+# Value length (6) does not equal array index length (2).
+# 
+# ** Error: (vsim-4011) Invalid force value: {A1, A2}.
+# 
+force d (A1, A2)
+# Value length (3) does not equal array index length (2).
+# 
+# ** Error: (vsim-4011) Invalid force value: (A1, A2).
+# 
+force d A1, A2
+# ** Error: (vsim-4026) Value "'A'" does not represent a literal of the enumeration type.
+# ** Error: (vsim-4011) Invalid force value: A1, A2.
+# 
+force d(0) "A1"
+force d(1) "A2"
+run 10
+# hds_restart 
+restart -force
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3865) Due to PLI being present, full design access is being specified.
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.battleshiptypes
+# Loading work.gameboard(behavior)#1
+force d(0) "a5"
+force d(1) "A6"
+run 10
+force location "a5"
+force fired '1'
+run 10
+do H:/ECE1120/Battleship
+# Cannot open macro file: H:/ECE1120/Battleship
+do H:/ECE1120/Battleship/initialize_macro.do
+# 0
+# 
+do H:/ECE1120/Battleship/initialize_macro.do
+# 0
+# 
+# 0
+# 
+do H:/ECE1120/Battleship/initialize_macro.do
+# 0
+# 
+# 0
+# 
+# hds_restart 
+restart -force
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3865) Due to PLI being present, full design access is being specified.
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.battleshiptypes
+# Loading work.gameboard(behavior)#1
+do H:/ECE1120/Battleship/initialize_macro.do
+# 0
+# 
+do H:/ECE1120/Battleship/initialize_macro.do
+# 0
+# 
+# 0
+# 
+# 0
+# 
+force d(0) "B3"
+force d(1) "B4"
+force s1(0) "E2"
+force s1(1) "F2"
+force s1(2) "G2"
+force s2(0) "C8"
+force s2(1) "D8"
+force s2(2) "E8"
+force cr(0) "E4"
+force cr(1) "E5"
+force cr(2) "E6"
+force b(0) "G8"
+force b(1) "H8"
+force b(2) "I8"
+force b(3) "J8"
+force ca(0) "J2"
+force ca(1) "J3"
+force ca(2) "J4"
+force ca(3) "J5"
+force ca(4) "J6"
+
+force initialize '1'
+run 100
+# 0
+# 
+force initialize '0'
+run 10
+# 0
+# 
+# hds_restart 
+restart -force
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3865) Due to PLI being present, full design access is being specified.
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.battleshiptypes
+# Loading work.gameboard(behavior)#1
+do H:/ECE1120/Battleship/initialize_macro.do
+# 0
+# 
+# 0
+# 
+# 0
+# 
+restart -force
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+force d(0) "B3"
+force d(1) "B4"
+force s1(0) "E2"
+force s1(1) "F2"
+force s1(2) "G2"
+force s2(0) "C8"
+force s2(1) "D8"
+force s2(2) "E8"
+force cr(0) "E4"
+force cr(1) "E5"
+force cr(2) "E6"
+force b(0) "G8"
+force b(1) "H8"
+force b(2) "I8"
+force b(3) "J8"
+force ca(0) "J2"
+force ca(1) "J3"
+force ca(2) "J4"
+force ca(3) "J5"
+force ca(4) "J6"
+
+force initialize '1'
+
+run 100
+force initialize '0'
+run 10
+# 0
+# 
+force location "B3"
+force fired '1'
+run 100
+# 0
+# 
+# hds_restart 
+restart -force
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3865) Due to PLI being present, full design access is being specified.
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.battleshiptypes
+# Loading work.gameboard(behavior)#1
+force d(0) "B3"
+force d(1) "B4"
+force s1(0) "E2"
+force s1(1) "F2"
+force s1(2) "G2"
+force s2(0) "C8"
+force s2(1) "D8"
+force s2(2) "E8"
+force cr(0) "E4"
+force cr(1) "E5"
+force cr(2) "E6"
+force b(0) "G8"
+force b(1) "H8"
+force b(2) "I8"
+force b(3) "J8"
+force ca(0) "J2"
+force ca(1) "J3"
+force ca(2) "J4"
+force ca(3) "J5"
+force ca(4) "J6"
+
+force initialize '1'
+
+run 100
+force initialize '0'
+run 10
+# 0
+# 
+force location "B3"
+force fired '1'
+run 100
+# 0
+# 
+force location "B4"
+force fired '1'
+run 100
+# 0
+# 
+run 100
+# 0
+# 
+run 100
+# 0
+# 
+run 100
+# 0
+# 
+do H:/ECE1120/Battleship/initialize_macro.do
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+do H:/ECE1120/Battleship/initialize_macro.do
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# hds_restart 
+restart -force
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3865) Due to PLI being present, full design access is being specified.
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.battleshiptypes
+# Loading work.gameboard(behavior)#1
+do H:/ECE1120/Battleship/initialize_macro.do
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# hds_restart 
+restart -force
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3865) Due to PLI being present, full design access is being specified.
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.battleshiptypes
+# Loading work.gameboard(behavior)#1
+do H:/ECE1120/Battleship/initialize_macro.do
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# hds_restart 
+restart -force
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3865) Due to PLI being present, full design access is being specified.
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.battleshiptypes
+# Loading work.gameboard(behavior)#1
+do H:/ECE1120/Battleship/initialize_macro.do
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# hds_restart 
+restart -force
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3865) Due to PLI being present, full design access is being specified.
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.battleshiptypes
+# Loading work.gameboard(behavior)#1
+do H:/ECE1120/Battleship/initialize_macro.do
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# hds_restart 
+restart -force
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3865) Due to PLI being present, full design access is being specified.
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.battleshiptypes
+# Loading work.gameboard(behavior)#1
+do H:/ECE1120/Battleship/initialize_macro.do
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+do H:/ECE1120/Battleship/initialize_macro.do
+# Loading D:/local/Mentor/HDL_Designer/resources/downstream/modelsim/ModelSim_32Bit.dll
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# The connection to HDS has been closed 

@@ -1,0 +1,45 @@
+-- Katie Pucci
+-- ECE1120:: Battleship AI
+-- Game Space
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+-- Inputs::
+--    Shoot: other player shot at this location
+--    Piece: type of gamepiece
+--       000 - Destroyer
+--       001 - Submarine
+--       010 - Cruiser
+--       011 - Battleship
+--       100 - Carrier
+--    North: game space number connected in north direction
+--    East: game space number connected in east direction
+--    South: game space number connected in south direction
+--    West: game space number connected in west direction
+-- Outputs::
+--    State: current state of piece
+--       00 - Open
+--       01 - Miss
+--       10 - Hit
+--       11 - Sunk
+ENTITY GameSpace IS
+  PORT (
+    Shoot  : IN STD_LOGIC;  -- 
+    Piece  : IN STD_LOGIC_VECTOR(2 DOWNTO 0); -- Gamepiece 
+    North  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    East   : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    West   : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    South  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    State  : OUT STD_LOGIC
+  );
+END ENTITY GameSpace;
+
+--
+ARCHITECTURE behavior OF GameSpace IS
+  SIGNAL state : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  SIGNAL game_piece : STD_LOGIC_VECTOR(2 DOWNTO 0); 
+BEGIN
+END ARCHITECTURE behavior;
+

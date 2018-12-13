@@ -1,0 +1,19 @@
+-- Katie Pucci
+-- ECE1120:: Battleship AI
+-- Destroyer
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+ENTITY Destroyer IS
+  PORT (
+    
+  );
+END ENTITY Destroyer;
+
+--
+ARCHITECTURE behavior OF Destroyer IS
+BEGIN
+END ARCHITECTURE behavior;
+
